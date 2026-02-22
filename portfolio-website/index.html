@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة المهام</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 نظام إدارة المهام</h1>
+        </header>
+        
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="أدخل مهمة جديدة...">
+            <button id="addTaskBtn">إضافة</button>
+        </div>
+        
+        <div class="tasks-container">
+            <ul id="taskList"></ul>
+            <p id="emptyMessage" class="empty-message">لا توجد مهام حالياً. أضف مهمة جديدة!</p>
+        </div>
+        
+        <div class="stats">
+            <span>المهام المكتملة: <span id="completedCount">0</span></span>
+            <span>المهام المتبقية: <span id="pendingCount">0</span></span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
