@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام حجز المواعيد - احجز موعدك الآن</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;800&display=swap;600;700" rel="stylesheet">
+    <!-- Booking CSS -->
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">حجز<span>موعد</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#booking">احجز الآن</a></li>
+                    <li><a href="#contact">تواصل معنا</a></li>
+                    <li><a href="login.html" class="btn-login">تسجيل دخول</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero booking-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-subtitle">احجز موعدك بسهولة</span>
+                <h1 class="hero-title">نظام حجز المواعيد <span>الذكي</span></h1>
+                <p class="hero-text">قم بحجز موعدك بسهولة وسرعة. اختر الخدمة المناسبة لك وحدد الوقت المناسب لك. نظام متكامل لإدارة مواعيدك بكفاءة.</p>
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn btn-primary">احجز الآن <i class="fas fa-calendar-plus"></i></a>
+                    <a href="#how-it-works" class="btn btn-secondary">كيف يعمل؟</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="1250">0</span>
+                        <span class="stat-label">موعد محجوز</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="98">0</span>
+                        <span class="stat-label">نسبة رضا العملاء</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="24">0</span>
+                        <span class="stat-label">ساعة توفر</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="booking-illustration">
+                    <div class="calendar-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="fas fa-clock"></i>
+                        <span>اختر الوقت</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fas fa-user-md"></i>
+                        <span>اختر الخدمة</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fas fa-check-circle"></i>
+                        <span>تأكيد الحجز</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">خدماتنا</h2>
+                <p class="section-subtitle">اختر الخدمة المناسبة لك</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-service="consultation" data-price="150" data-duration="30">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>استشارة عامة</h3>
+                    <p>استشارة عامة في مجال عملك مع أحد خبرائنا</p>
+                    <div class="service-meta">
+                        <span class="price">150 ريال</span>
+                        <span class="duration"><i class="fas fa-clock"></i> 30 دقيقة</span>
+                    </div>
+                    <button class="btn btn-primary btn-select-service">اختيار</button>
+                </div>
+                <div class="service-card" data-service="technical" data-price="250" data-duration="60">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>استشارة تقنية</h3>
+                    <p>استشارة متخصصة في التقنية والبرمجة</p>
+                    <div class="service-meta">
+                        <span class="price">250 ريال</span>
+                        <span class="duration"><i class="fas fa-clock"></i> 60 دقيقة</span>
+                    </div>
+                    <button class="btn btn-primary btn-select-service">اختيار</button>
+                </div>
+                <div class="service-card" data-service="business" data-price="350" data-duration="90">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>استشارة أعمال</h3>
+                    <p>استشارة شاملة لتطوير أعمالك ومشروعك</p>
+                    <div class="service-meta">
+                        <span class="price">350 ريال</span>
+                        <span class="duration"><i class="fas fa-clock"></i> 90 دقيقة</span>
+                    </div>
+                    <button class="btn btn-primary btn-select-service">اختيار</button>
+                </div>
+                <div class="service-card" data-service="training" data-price="500" data-duration="120">
+                    <div class="service-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>تدريب شخصي</h3>
+                    <p>جلسة تدريب شخصية مع مدرب متخصص</p>
+                    <div class="service-meta">
+                        <span class="price">500 ريال</span>
+                        <span class="duration"><i class="fas fa-clock"></i> 120 دقيقة</span>
+                    </div>
+                    <button class="btn btn-primary btn-select-service">اختيار</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">كيف يعمل النظام؟</h2>
+                <p class="section-subtitle">خطوات بسيطة لحجز موعدك</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <h3>اختر التاريخ</h3>
+                    <p>اختر التاريخ المناسب لك من التقويم</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>اختر الوقت</h3>
+                    <p>حدد الوقت المتاح المناسب لجدولك</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>أدخل بياناتك</h3>
+                    <p>املأ بياناتك الشخصية للتأكيد</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3>تأكيد الحجز</h3>
+                    <p>ستصلك رسالة تأكيد على بريدك الإلكتروني</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">احجز موعدك الآن</h2>
+                <p class="section-subtitle">اختر الخدمة والتاريخ والوقت المناسب لك</p>
+            </div>
+            <div class="booking-container">
+                <!-- Calendar Section -->
+                <div class="calendar-section">
+                    <div class="calendar-header">
+                        <button class="calendar-nav-btn" id="prevMonth">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <h3 id="currentMonthYear">يناير 2025</h3>
+                        <button class="calendar-nav-btn" id="nextMonth">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <div>الأحد</div>
+                        <div>الإثنين</div>
+                        <div>الثلاثاء</div>
+                        <div>الأربعاء</div>
+                        <div>الخميس</div>
+                        <div>الجمعة</div>
+                        <div>السبت</div>
+                    </div>
+                    <div class="calendar-days" id="calendarDays">
+                        <!-- Days will be generated by JavaScript -->
+                    </div>
+                    <div class="calendar-legend">
+                        <div class="legend-item">
+                            <span class="legend-color available"></span>
+                            <span>متاح</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color selected"></span>
+                            <span>محدد</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color unavailable"></span>
+                            <span>غير متاح</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Slots Section -->
+                <div class="time-section">
+                    <h3>الأوقات المتاحة</h3>
+                    <p class="selected-date" id="selectedDateText">الرجاء اختيار التاريخ أولاً</p>
+                    <div class="time-slots" id="timeSlots">
+                        <div class="time-slot disabled" data-time="09:00">
+                            <span>09:00 صباحاً</span>
+                        </div>
+                        <div class="time-slot disabled" data-time="10:00">
+                            <span>10:00 صباحاً</span>
+                        </div>
+                        <div class="time-slot disabled" data-time="11:00">
+                            <span>11:00 صباحاً</span>
+                        </div>
+                        <div class="time-slot disabled" data-time="12:00">
+                            <span>12:00 ظهراً</span>
+                        </div>
+                        <div class="time-slot disabled" data-time="14:00">
+                            <span>02:00 مساءً</span>
+                        </div>
+                        <div class="time-slot disabled" data-time="15:00">
+                            <span>03:00 مساءً</span>
+                        </div>
+                        <div class="time-slot disabled" data-time="16:00">
+                            <span>04:00 مساءً</span>
+                        </div>
+                        <div class="time-slot disabled" data-time="17:00">
+                            <span>05:00 مساءً</span>
+                        </div>
+                    </div>
+                    <div class="no-date-selected" id="noDateMessage">
+                        <i class="fas fa-calendar-times"></i>
+                        <p>الرجاء اختيار التاريخ لعرض الأوقات المتاحة</p>
+                    </div>
+                </div>
+
+                <!-- Booking Form Section -->
+                <div class="booking-form-section">
+                    <h3>بيانات الحجز</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="customerName">الاسم الكامل</label>
+                            <div class="input-group">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="customerName" name="customerName" placeholder="أدخل اسمك الكامل" required>
+                            </div>
+                            <span class="error-message" id="customerNameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">البريد الإلكتروني</label>
+                            <div class="input-group">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="customerEmail" name="customerEmail" placeholder="أدخل بريدك الإلكتروني" required>
+                            </div>
+                            <span class="error-message" id="customerEmailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">رقم الهاتف</label>
+                            <div class="input-group">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="customerPhone" name="customerPhone" placeholder="أدخل رقم هاتفك" required>
+                            </div>
+                            <span class="error-message" id="customerPhoneError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="selectedService">الخدمة المختارة</label>
+                            <div class="input-group">
+                                <i class="fas fa-concierge-bell"></i>
+                                <select id="selectedService" name="selectedService" required>
+                                    <option value="">اختر خدمة</option>
+                                    <option value="consultation">استشارة عامة - 150 ريال</option>
+                                    <option value="technical">استشارة تقنية - 250 ريال</option>
+                                    <option value="business">استشارة أعمال - 350 ريال</option>
+                                    <option value="training">تدريب شخصي - 500 ريال</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingNotes">ملاحظات (اختياري)</label>
+                            <div class="input-group">
+                                <i class="fas fa-sticky-note"></i>
+                                <textarea id="bookingNotes" name="bookingNotes" placeholder="أي ملاحظات تريد إضافتها..." rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="booking-summary" id="bookingSummary">
+                            <h4>ملخص الحجز</h4>
+                            <div class="summary-item">
+                                <span>التاريخ:</span>
+                                <span id="summaryDate">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>الوقت:</span>
+                                <span id="summaryTime">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>الخدمة:</span>
+                                <span id="summaryService">-</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>السعر:</span>
+                                <span id="summaryPrice">-</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBooking">
+                            <i class="fas fa-calendar-check"></i> تأكيد الحجز
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">تواصل معنا</h2>
+                <p class="section-subtitle">نحن هنا لمساعدتك</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>الموقع</h3>
+                            <p>الرياض، المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>البريد الإلكتروني</h3>
+                            <p>info@booking-system.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>الهاتف</h3>
+                            <p>+966 12 345 6789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>تم الحجز بنجاح!</h3>
+            <p>شكراً لك! تم حجز موعدك بنجاح. ستصلك رسالة تأكيد على بريدك الإلكتروني.</p>
+            <div class="booking-details" id="modalBookingDetails">
+                <!-- Booking details will be inserted here -->
+            </div>
+            <button class="btn btn-primary" id="closeModal">حسناً</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">حجز<span>موعد</span></a>
+                    <p>نظام حجز المواعيد الذكي - احجز موعدك بسهولة وسرعة</p>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="#services">الخدمات</a></li>
+                        <li><a href="#booking">احجز الآن</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="footer-copyright">© 2025 جميع الحقوق محفوظة لنظام حجز المواعيد</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/database.js"></script>
+    <script src="script.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>

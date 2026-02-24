@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات - بوابة الطلاب الذكية</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">بوابة الطلاب<span>الذكية</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html" class="active">الخدمات</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><a href="login.html" class="btn-login">تسجيل دخول</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>خدماتنا</h1>
+            <p>مجموعة متنوعة من الدورات التعليمية في مجال البرمجة والتقنية</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="all-services">
+        <div class="container">
+            <div class="services-categories">
+                <!-- Frontend Category -->
+                <div class="service-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>تطوير الواجهة الأمامية (Frontend)</h3>
+                    </div>
+                    <div class="category-services">
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>HTML - الأساسيات</h4>
+                                <p>تعلم لغة ترميز النصوص التشعبية وبناء هيكل صفحات الويب</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i> عناصر HTML الأساسية</li>
+                                    <li><i class="fas fa-check"></i> الجداول والقوائم</li>
+                                    <li><i class="fas fa-check"></i> النماذج والتفاعل</li>
+                                    <li><i class="fas fa-check"></i> SEO الأساسي</li>
+                                </ul>
+                                <span class="service-level">مبتدئ</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>CSS - التنسيق المتقدم</h4>
+                                <p>تنسيق صفحات الويب وإضافة التأثيرات البصرية الجميلة</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i>Selectors والأنماط</li>
+                                    <li><i class="fas fa-check"></i>Flexbox و Grid</li>
+                                    <li><i class="fas fa-check"></i>التجاوب (Responsive)</li>
+                                    <li><i class="fas fa-check"></i>الرسوم المتحركة</li>
+                                </ul>
+                                <span class="service-level">مبتدئ إلى متوسط</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>JavaScript - البرمجة التفاعلية</h4>
+                                <p>إضافة التفاعل والحياة لصفحات الويب</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i>أساسيات البرمجة</li>
+                                    <li><i class="fas fa-check"></i>DOM Manipulation</li>
+                                    <li><i class="fas fa-check"></i>الأحداث (Events)</li>
+                                    <li><i class="fas fa-check"></i>AJAX و Fetch API</li>
+                                </ul>
+                                <span class="service-level">متوسط</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>React.js - مكتبة الواجهة</h4>
+                                <p>بناء تطبيقات ويب تفاعلية وحديثة</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i>Components</li>
+                                    <li><i class="fas fa-check"></i>Props و State</li>
+                                    <li><i class="fas fa-check"></i>Hooks</li>
+                                    <li><i class="fas fa-check"></i>React Router</li>
+                                </ul>
+                                <span class="service-level">متقدم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Category -->
+                <div class="service-category">
+                    <div class="category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>تطوير الجانب الخلفي (Backend)</h3>
+                    </div>
+                    <div class="category-services">
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>Node.js - بيئة التشغيل</h4>
+                                <p>تعلم JavaScript من جانب الخادم</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i>أساسيات Node.js</li>
+                                    <li><i class="fas fa-check"></i>NPM والحزم</li>
+                                    <li><i class="fas fa-check"></i>Express.js</li>
+                                    <li><i class="fas fa-check"></i>RESTful APIs</li>
+                                </ul>
+                                <span class="service-level">متوسط</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>قواعد البيانات</h4>
+                                <p>تصميم وإدارة قواعد البيانات</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i>MySQL</li>
+                                    <li><i class="fas fa-check"></i>MongoDB</li>
+                                    <li><i class="fas fa-check"></i>تصميم الجداول</li>
+                                    <li><i class="fas fa-check"></i>الاستعلامات</li>
+                                </ul>
+                                <span class="service-level">متوسط</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>Python - البرمجة العامة</h4>
+                                <p>تعلم لغة بايثون وتطبيقاتها المختلفة</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i>أساسيات بايثون</li>
+                                    <li><i class="fas fa-check"></i>برمجة كائنية</li>
+                                    <li><i class="fas fa-check"></i>Django Framework</li>
+                                    <li><i class="fas fa-check"></i>علم البيانات</li>
+                                </ul>
+                                <span class="service-level">مبتدئ إلى متقدم</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>الأمان والحماية</h4>
+                                <p>تأمين التطبيقات والحماية من الهجمات</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i>مبادئ الأمان</li>
+                                    <li><i class="fas fa-check"></i>تشفير البيانات</li>
+                                    <li><i class="fas fa-check"></i>حماية من SQL Injection</li>
+                                    <li><i class="fas fa-check"></i>المصادقة والترخيص</li>
+                                </ul>
+                                <span class="service-level">متقدم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & DevOps -->
+                <div class="service-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>أدوات وممارسات التطوير</h3>
+                    </div>
+                    <div class="category-services">
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>Git - إدارة الإصدارات</h4>
+                                <p>تعلم التحكم في إصدارات الكود والتعاون</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i>أساسيات Git</li>
+                                    <li><i class="fas fa-check"></i>الفروع (Branches)</li>
+                                    <li><i class="fas fa-check"></i>GitHub</li>
+                                    <li><i class="fas fa-check"></i>العمل الجماعي</li>
+                                </ul>
+                                <span class="service-level">مبتدئ</span>
+                            </div>
+                        </div>
+                        <div class="service-box">
+                            <div class="service-box-icon">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <div class="service-box-content">
+                                <h4>Docker - الحاويات</h4>
+                                <p>تعلم تقنية الحاويات وتطبيقاتها</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-check"></i>أساسيات Docker</li>
+                                    <li><i class="fas fa-check"></i>بناء الصور</li>
+                                    <li><i class="fas fa-check"></i>Docker Compose</li>
+                                    <li><i class="fas fa-check"></i>النشر</li>
+                                </ul>
+                                <span class="service-level">متوسط إلى متقدم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">خطط الاشتراك</h2>
+                <p class="section-subtitle">اختر الخطة المناسبة لك</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>الخطة المجانية</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                            <span class="period">/شهر</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> الوصول للدورات الأساسية</li>
+                        <li><i class="fas fa-check"></i> ملفات تعليمية PDF</li>
+                        <li><i class="fas fa-times"></i> مشاريع عملية</li>
+                        <li><i class="fas fa-times"></i> شهادات معتمدة</li>
+                        <li><i class="fas fa-times"></i> دعم مباشر</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-secondary">سجل مجاناً</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">الأكثر شعبية</div>
+                    <div class="pricing-header">
+                        <h3>الخطة الأساسية</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">19</span>
+                            <span class="period">/شهر</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> الوصول لجميع الدورات</li>
+                        <li><i class="fas fa-check"></i> مشاريع عملية</li>
+                        <li><i class="fas fa-check"></i> شهادات معتمدة</li>
+                        <li><i class="fas fa-check"></i> دعم عبر البريد</li>
+                        <li><i class="fas fa-times"></i> جلسات مباشرة</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-primary">اشترك الآن</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>الخطة المتقدمة</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">49</span>
+                            <span class="period">/شهر</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> الوصول لجميع الدورات</li>
+                        <li><i class="fas fa-check"></i> مشاريع عملية متقدمة</li>
+                        <li><i class="fas fa-check"></i> شهادات معتمدة</li>
+                        <li><i class="fas fa-check"></i> دعم مباشر</li>
+                        <li><i class="fas fa-check"></i> جلسات مباشرة</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-secondary">اشترك الآن</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>ابدأ رحلتك التعليمية الآن</h2>
+                <p>سجل مجاناً واستكشف محتوى الدورات التعليمية</p>
+                <a href="login.html" class="btn btn-primary">سجل الآن مجاناً</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">بوابة الطلاب<span>الذكية</span></a>
+                    <p>منصتك التعليمية لتعلم البرمجة والمهارات التقنية</p>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+                <p class="footer-copyright">© 2024 جميع الحقوق محفوظة لبوابة الطلاب الذكية</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
