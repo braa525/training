@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - نظام حجز المواعيد</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">حجز<span>موعد</span></a>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active">
+                    <a href="#" data-page="dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>لوحة التحكم</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="bookings">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>المواعيد</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="calendar">
+                        <i class="fas fa-calendar-week"></i>
+                        <span>التقويم</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="services">
+                        <i class="fas fa-concierge-bell"></i>
+                        <span>الخدمات</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="customers">
+                        <i class="fas fa-users"></i>
+                        <span>العملاء</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="reports">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>التقارير</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-page="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>الإعدادات</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="back-home">
+                <i class="fas fa-home"></i>
+                <span>العودة للرئيسية</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <button class="menu-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>لوحة التحكم</h1>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="بحث..." id="searchInput">
+                </div>
+                <button class="notification-btn" id="notificationBtn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge" id="notificationCount">0</span>
+                </button>
+                <div class="user-dropdown">
+                    <button class="user-btn">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Admin">
+                        <span class="user-name">المدير</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fas fa-user"></i> الملف الشخصي</a>
+                        <a href="#"><i class="fas fa-cog"></i> الإعدادات</a>
+                        <hr>
+                        <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> تسجيل خروج</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <div class="welcome-text">
+                    <h2>مرحباً بك في لوحة التحكم</h2>
+                    <p>إدارة نظام حجز المواعيد بسهولة وكفاءة</p>
+                </div>
+                <div class="welcome-actions">
+                    <button class="btn btn-primary" id="addBookingBtn">
+                        <i class="fas fa-plus"></i> إضافة حجز جديد
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" data-count="0" id="todayBookings">0</span>
+                        <span class="stat-label">مواعيد اليوم</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" data-count="0" id="confirmedBookings">0</span>
+                        <span class="stat-label">مواعيد مؤكدة</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" data-count="0" id="pendingBookings">0</span>
+                        <span class="stat-label">مواعيد معلقة</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-value" data-count="0" id="totalCustomers">0</span>
+                        <span class="stat-label">إجمالي العملاء</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Grid -->
+            <div class="dashboard-grid">
+                <!-- Recent Bookings -->
+                <div class="dashboard-card recent-bookings">
+                    <div class="card-header">
+                        <h3>أحدث المواعيد</h3>
+                        <a href="#" class="view-all" data-page="bookings">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                    <div class="card-body">
+                        <div class="bookings-table-wrapper">
+                            <table class="bookings-table" id="bookingsTable">
+                                <thead>
+                                    <tr>
+                                        <th>رقم الحجز</th>
+                                        <th>العميل</th>
+                                        <th>الخدمة</th>
+                                        <th>التاريخ</th>
+                                        <th>الوقت</th>
+                                        <th>الحالة</th>
+                                        <th>إجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bookingsTableBody">
+                                    <!-- Bookings will be inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="no-bookings" id="noBookingsMessage" style="display: none;">
+                            <i class="fas fa-calendar-times"></i>
+                            <p>لا توجد مواعيد محجوزة حالياً</p>
+                            <button class="btn btn-primary" onclick="Dashboard.showAddBookingModal()">
+                                <i class="fas fa-plus"></i> حجز جديد
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="dashboard-card quick-stats">
+                    <div class="card-header">
+                        <h3>إحصائيات سريعة</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="quick-stat-item">
+                            <div class="quick-stat-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="quick-stat-info">
+                                <span class="quick-stat-value" id="totalRevenue">0</span>
+                                <span class="quick-stat-label">إجمالي الإيرادات (ريال)</span>
+                            </div>
+                        </div>
+                        <div class="quick-stat-item">
+                            <div class="quick-stat-icon">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <div class="quick-stat-info">
+                                <span class="quick-stat-value" id="weeklyBookings">0</span>
+                                <span class="quick-stat-label">مواعيد هذا الأسبوع</span>
+                            </div>
+                        </div>
+                        <div class="quick-stat-item">
+                            <div class="quick-stat-icon">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                            <div class="quick-stat-info">
+                                <span class="quick-stat-value" id="completionRate">0%</span>
+                                <span class="quick-stat-label">نسبة الإتمام</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar Preview -->
+                <div class="dashboard-card calendar-preview">
+                    <div class="card-header">
+                        <h3>تقويم الشهر</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="mini-calendar" id="miniCalendar">
+                            <!-- Mini calendar will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h3 id="modalTitle">إضافة حجز جديد</h3>
+                <button class="modal-close" id="closeBookingModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingModalForm">
+                    <input type="hidden" id="bookingId">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modalCustomerName">اسم العميل</label>
+                            <input type="text" id="modalCustomerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalCustomerPhone">رقم الهاتف</label>
+                            <input type="tel" id="modalCustomerPhone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modalCustomerEmail">البريد الإلكتروني</label>
+                            <input type="email" id="modalCustomerEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalService">الخدمة</label>
+                            <select id="modalService" required>
+                                <option value="">اختر الخدمة</option>
+                                <option value="consultation">استشارة عامة - 150 ريال</option>
+                                <option value="technical">استشارة تقنية - 250 ريال</option>
+                                <option value="business">استشارة أعمال - 350 ريال</option>
+                                <option value="training">تدريب شخصي - 500 ريال</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modalDate">التاريخ</label>
+                            <input type="date" id="modalDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modalTime">الوقت</label>
+                            <select id="modalTime" required>
+                                <option value="">اختر الوقت</option>
+                                <option value="09:00">09:00 صباحاً</option>
+                                <option value="10:00">10:00 صباحاً</option>
+                                <option value="11:00">11:00 صباحاً</option>
+                                <option value="12:00">12:00 ظهراً</option>
+                                <option value="14:00">02:00 مساءً</option>
+                                <option value="15:00">03:00 مساءً</option>
+                                <option value="16:00">04:00 مساءً</option>
+                                <option value="17:00">05:00 مساءً</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalStatus">الحالة</label>
+                        <select id="modalStatus" required>
+                            <option value="confirmed">مؤكد</option>
+                            <option value="pending">معلق</option>
+                            <option value="cancelled">ملغى</option>
+                            <option value="completed">مكتمل</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modalNotes">ملاحظات</label>
+                        <textarea id="modalNotes" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelModalBtn">إلغاء</button>
+                <button class="btn btn-primary" id="saveBookingBtn">حفظ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <h3>تأكيد الحذف</h3>
+                <button class="modal-close" id="closeDeleteModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>هل أنت متأكد من حذف هذا الحجز؟ لا يمكن التراجع عن هذا الإجراء.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancelDeleteBtn">إلغاء</button>
+                <button class="btn btn-danger" id="confirmDeleteBtn">حذف</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
